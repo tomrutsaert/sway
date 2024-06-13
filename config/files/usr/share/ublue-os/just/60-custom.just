@@ -19,7 +19,7 @@ enable-rootless-docker-for-user:
     echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> ~/.bashrc
 
 # starship
-install-starship
+install-starship:
     #!/usr/bin/bash
     mkdir -p ~/.local/bin
     mkdir -p /tmp/starship
@@ -28,5 +28,6 @@ install-starship
     chmod +x install.sh
     ./install.sh -b ~/.local/bin -y
     echo 'eval "$(starship init bash)"' >> ~/.bashrc
+    cd ~
     source ~/.bashrc
     
