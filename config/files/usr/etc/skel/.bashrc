@@ -42,4 +42,6 @@ alias ll='ls -halF --color=auto'
 alias grep='grep --color=auto'
 alias vi=vim
 
+DOCKER_HOST=unix:///run/user/1000/docker.sock
+
 unset rc
