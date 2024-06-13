@@ -44,4 +44,6 @@ alias vi=vim
 
 DOCKER_HOST=unix:///run/user/1000/docker.sock
 
+eval "$(starship init bash)"
+
 unset rc

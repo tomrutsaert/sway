@@ -15,3 +15,5 @@ enable-rootless-docker-for-user:
     echo "$json" | sudo tee -a ~/.config/docker/daemon.json
     systemctl --user enable docker.service
     systemctl --user start docker.service
+    systemctl --user restart docker.service
+    

@@ -27,8 +27,23 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
        - firefox
        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: fonts
+  fonts:
+    nerd-fonts:
+      - FiraCode # don't add spaces or "Nerd Font" suffix
+      - Hack
+      - Meslo
+      - RobotoMono
+      - SourceCodePro
+      - Terminus
+      - JetBrainsMono
+      - NerdFontsSymbolsOnly
        
   - from-file: rootless-docker.yml
+  
+  - type: script
+    snippets: sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir /usr/bin
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -59,17 +74,6 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode # don't add spaces or "Nerd Font" suffix
-        - Hack
-        - Meslo
-        - RobotoMono
-        - SourceCodePro
-        - Terminus
-        - JetBrainsMono
-        - NerdFontsSymbolsOnly
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
