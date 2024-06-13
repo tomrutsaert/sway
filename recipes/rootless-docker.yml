@@ -20,7 +20,7 @@ modules:
         - docker.socket
   - type: script
     snippets: 
-     - echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock ' >> /etc/bashrc'
+     - "echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> /etc/bashrc'"
 
 
 
