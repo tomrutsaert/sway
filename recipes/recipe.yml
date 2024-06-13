@@ -43,7 +43,7 @@ modules:
   - from-file: rootless-docker.yml
   
   - type: script
-    snippets: sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir /usr/bin
+    snippets: sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --bin-dir /usr/bin -y
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
