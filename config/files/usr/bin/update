@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rpm-ostree upgrade
+flatpak update -y
+distrobox-upgrade -a
