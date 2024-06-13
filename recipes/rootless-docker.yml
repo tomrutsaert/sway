@@ -1,4 +1,4 @@
-# installs rootless docker
+# installs rootless docker wip 
 modules:
   - type: rpm-ostree
     repos: 
@@ -18,13 +18,6 @@ modules:
       disabled:
         - docker.service
         - docker.socket
-  - type: script
-    snippets:
-      - /usr/bin/dockerd-rootless-setuptool.sh install
-  - type: systemd
-    user:
-      enabled:
-        - docker.service
 
 
 
