@@ -29,5 +29,4 @@ install-starship:
     ./install.sh -b ~/.local/bin -y
     echo 'eval "$(starship init bash)"' >> ~/.bashrc
     cd ~
-    source ~/.bashrc
     

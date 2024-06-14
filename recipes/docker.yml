@@ -1,4 +1,5 @@
-# installs rootless docker wip 
+# installs (rootless) docker 
+# execute 'ujust enable-rootless-docker-for-user' as end user to finish setup 
 modules:
   - type: rpm-ostree
     repos: 

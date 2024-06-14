@@ -20,13 +20,14 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+      - stow
       # - micro
       # - starship
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-       - firefox
-       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - firefox
+      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: fonts
     fonts:
@@ -40,7 +41,7 @@ modules:
         - JetBrainsMono
         - NerdFontsSymbolsOnly
        
-  - from-file: rootless-docker.yml
+  - from-file: docker.yml
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -62,7 +63,6 @@ modules:
          - com.github.tchx84.Flatseal
          - it.mijorus.gearlever
          - org.mozilla.firefox
-         - io.podman_desktop.PodmanDesktop
          - com.vscodium.codium
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
