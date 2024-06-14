@@ -42,6 +42,7 @@ modules:
         - NerdFontsSymbolsOnly
        
   - from-file: docker.yml
+  - from-file: virtualization.yml
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -64,6 +65,7 @@ modules:
          - it.mijorus.gearlever
          - org.mozilla.firefox
          - com.vscodium.codium
+         - org.flameshot.Flameshot
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
