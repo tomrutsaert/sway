@@ -17,10 +17,27 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - type: rpm-ostree
-    repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos: 
+    # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - stow
+      - docker-ce  #docker
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+      - fuse-overlayfs
+      - iptables-utils
+      - stow  #stow
+      - virt-install  #virt
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu-kvm
+      - virt-manager
+      - virt-viewer
+      - guestfs-tools
+      - python3-libguestfs
+      - virt-top
       # - micro
       # - starship
     remove:
@@ -40,9 +57,15 @@ modules:
         - Terminus
         - JetBrainsMono
         - NerdFontsSymbolsOnly
-       
-  - from-file: docker.yml
-  - from-file: virtualization.yml
+
+  - type: systemd
+    system:
+      enabled:
+        - containerd.service #docker
+        - libvirtd.service  #virt
+      disabled:
+        - docker.service
+        - docker.socket
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
