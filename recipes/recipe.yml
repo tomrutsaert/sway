@@ -29,15 +29,6 @@ modules:
       - fuse-overlayfs
       - iptables-utils
       - stow  #stow
-      - virt-install  #virt
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
-      - qemu-kvm
-      - virt-manager
-      - virt-viewer
-      - guestfs-tools
-      - python3-libguestfs
-      - virt-top
       # - micro
       # - starship
     remove:
@@ -62,7 +53,6 @@ modules:
     system:
       enabled:
         - containerd.service #docker
-        - libvirtd.service  #virt
       disabled:
         - docker.service
         - docker.socket
