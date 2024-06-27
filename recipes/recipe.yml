@@ -49,6 +49,10 @@ modules:
         - JetBrainsMono
         - NerdFontsSymbolsOnly
 
+  - type: script
+    scripts: 
+      - starship.sh
+
   - type: systemd
     system:
       enabled:
