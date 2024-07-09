@@ -17,16 +17,3 @@ enable-rootless-docker-for-user:
     systemctl --user start docker.service
     systemctl --user restart docker.service
     echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> ~/.bashrc
-
-# starship
-install-starship:
-    #!/usr/bin/bash
-    mkdir -p ~/.local/bin
-    mkdir -p /tmp/starship
-    cd /tmp/starship
-    curl -O https://starship.rs/install.sh
-    chmod +x install.sh
-    ./install.sh -b ~/.local/bin -y
-    echo 'eval "$(starship init bash)"' >> ~/.bashrc
-    cd ~
-    
