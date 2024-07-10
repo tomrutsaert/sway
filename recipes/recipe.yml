@@ -20,7 +20,6 @@ modules:
     repos: 
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
-      - https://gist.githubusercontent.com/tomrutsaert/461c5e131ef942e861d0ba0506353d59/raw/bac409c336452e683966e74eab452fab08136b35/charm.repo #charm
     install:
       - docker-ce  #docker
       - docker-ce-cli
