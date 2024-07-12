@@ -48,14 +48,14 @@ modules:
     scripts: 
       - starship.sh
 
-  - type: systemd
-    system:
-      enabled:
-        - containerd.service #docker
-        - libvirtd.service
-      disabled:
-        - docker.service
-        - docker.socket
+  # - type: systemd
+  #   system:
+  #     enabled:
+  #       - containerd.service #docker
+  #       - libvirtd.service
+  #     disabled:
+  #       - docker.service
+  #       - docker.socket
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
