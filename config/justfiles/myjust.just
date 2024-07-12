@@ -17,3 +17,6 @@ enable-rootless-docker-for-user:
     systemctl --user start docker.service
     systemctl --user restart docker.service
     echo 'export DOCKER_HOST=unix:///run/user/1000/docker.sock' >> ~/.bashrc
+
+add-user-to-libvirt-group:
+    sudo usermod -a -G libvirt $(whoami)
