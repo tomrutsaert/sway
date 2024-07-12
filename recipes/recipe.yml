@@ -30,15 +30,6 @@ modules:
       - docker-compose-plugin
       - fuse-overlayfs
       - iptables-utils
-      - virt-install
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
-      - qemu-kvm
-      - virt-manager
-      - virt-viewer
-      - guestfs-tools
-      - python3-libguestfs
-      - virt-top
       - stow  #stow
       - gum
       # - micro
@@ -69,7 +60,6 @@ modules:
     system:
       enabled:
         - containerd.service #docker
-        - libvirtd.service
       disabled:
         - docker.service
         - docker.socket
