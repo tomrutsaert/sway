@@ -10,12 +10,9 @@ modules:
       - containerd.io
       - docker-buildx-plugin
       - docker-compose-plugin
-      - fuse-overlayfs
-      - iptables-utils
   - type: systemd
     system:
       enabled:
         - containerd.service
-      disabled:
         - docker.service
         - docker.socket

@@ -20,17 +20,16 @@ modules:
 
   - type: rpm-ostree
     repos: 
-    # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - stow #stow
       - gum #gum
-      # - micro
-      # - starship
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - from-file: docker.yml
+  
+  - from-file: virtualization.yml
 
   - type: fonts
     fonts:
@@ -47,15 +46,6 @@ modules:
   - type: script
     scripts: 
       - starship.sh
-
-  # - type: systemd
-  #   system:
-  #     enabled:
-  #       - containerd.service #docker
-  #       - libvirtd.service
-  #     disabled:
-  #       - docker.service
-  #       - docker.socket
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -79,8 +69,6 @@ modules:
          - org.mozilla.firefox
          - com.vscodium.codium
          - org.flameshot.Flameshot
-        # - org.gnome.Loupe
-        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
