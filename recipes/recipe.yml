@@ -46,6 +46,10 @@ modules:
   - type: script
     scripts: 
       - starship.sh
+  
+  - type: justfiles
+    include: 
+      - myjust.just
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
