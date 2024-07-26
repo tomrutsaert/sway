@@ -28,7 +28,7 @@ modules:
 
   - type: script
     snippets:
-    - "echo 'eval "$(starship init bash)"' >> /etc/bashrc" # set starship for all users
+    - "echo 'eval \"$(starship init bash)\"' >> /etc/bashrc" # set starship for all users
 
   - from-file: docker.yml
   - from-file: virtualization.yml
