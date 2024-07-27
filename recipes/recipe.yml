@@ -69,7 +69,7 @@ modules:
          - io.missioncenter.MissionCenter
       remove:
 
-    - from-file: gaming.yml
+  - from-file: gaming.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
