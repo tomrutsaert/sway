@@ -26,10 +26,6 @@ modules:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  - type: script
-    snippets:
-      - "echo 'eval \"$(starship init bash)\"' >> /usr/etc/bashrc" # set starship for all users
-
   - from-file: docker.yml
   - from-file: virtualization.yml
 
