@@ -22,6 +22,9 @@ modules:
       - stow
       - gum
       - starship
+      - hplib
+      - solaar
+      # - gcc # for brew in the future
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
