@@ -22,8 +22,12 @@ modules:
       - stow
       - gum
       - starship
-      - hplib
+      - hplip
       - solaar
+      - iotop
+      - powertop
+      - btop
+      - bpftop
       # - gcc # for brew in the future
     remove:
       - firefox
