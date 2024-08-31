@@ -1,5 +1,11 @@
 # sway &nbsp; [![build-ublue](https://github.com/tomrutsaert/sway/actions/workflows/build.yml/badge.svg)](https://github.com/tomrutsaert/sway/actions/workflows/build.yml)
 
+
+# Archived
+> **Warning**  
+> archived -> Go to https://github.com/tomrutsaert/myos/
+
+
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
 After setup, it is recommended you update this README to describe your custom image.
